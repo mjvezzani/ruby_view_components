@@ -1,0 +1,21 @@
+  <div class="whiteSectionWrapper">
+    <div class="carouselSection _container">
+      <div class="carouselSection__staticBlock">
+        <h1 class="carouselSection__staticBlock__title"><%= title %></h1>
+        <%= title_image %>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide carouselSection__carouselBlock" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <% slides.each do |slide| %>
+            <%= slide %>
+          <% end %>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+

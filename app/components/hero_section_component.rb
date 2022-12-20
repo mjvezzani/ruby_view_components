@@ -5,7 +5,8 @@ class HeroSectionComponent < ViewComponent::Base
   renders_one :button
   renders_one :image
 
-  def initialize(image_side:)
+  def initialize(image_side:, bg_color:)
     @image_side = image_side
+    @bg_color = bg_color
   end
 end
