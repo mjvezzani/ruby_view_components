@@ -1,0 +1,172 @@
+<% content_for :title, "Custom Branding Reports" %>
+
+<% content_for :additional_javascript do %>
+  <script>
+    const handleScroll = () => {
+      const scrollDiv = document.getElementById('scrollDiv');
+      scrollDiv.scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+<% end %>
+
+<div class="custom-branding-wrapper">
+  <%= render HeroSectionComponent.new(image_side: "right_side") do |c| %>
+    <% c.with_subtitle do %>
+      Custom Brand Your PRO Reports
+    <% end %>
+    <% c.with_title do %>
+      Build your brand, grow your business, and stay ahead of the competition
+    <% end %>
+    <% c.with_description do %>
+      Combine your market expertise with our Rental Property Analysis Reports to take your rental
+      housing business to the next level.
+    <% end %>
+    <% c.with_button do %>
+      <%= link_to "Get Started", "/pricing", class: "button" %>
+    <% end %>
+    <% c.with_image do %>
+      <%= image_tag "custom_branding/customLogo", class: "content" %>
+    <% end %>
+  <% end %>
+
+  <div class="greySectionWrapper">
+    <%= render IconCardShelfComponent.new do |shelf| %>
+      <% shelf.with_title do %>
+        Leverage Custom Branding as a Marketing Tool
+      <% end %>
+
+      <% shelf.with_icon_card do |card| %>
+        <% card.with_image do %>
+          <%= image_tag "custom_branding/customBoostBrand.svg" %>
+        <% end %>
+        <% card.with_title do %>
+          Boost Brand Visibility
+        <% end %>
+        <% card.with_description do %>
+          Increase brand awareness by adding your logo to our reports
+        <% end %>
+      <% end %>
+
+      <% shelf.with_icon_card do |card| %>
+        <% card.with_image do %>
+          <%= image_tag "custom_branding/customBuildBrand.svg" %>
+        <% end %>
+        <% card.with_title do %>
+          Awesome Components
+        <% end %>
+        <% card.with_description do %>
+          This component stuff is working out nicely
+        <% end %>
+      <% end %>
+
+      <% shelf.with_icon_card do |card| %>
+        <% card.with_image do %>
+          <%= image_tag "custom_branding/customStep1.svg" %>
+        <% end %>
+        <% card.with_title do %>
+          Still Working
+        <% end %>
+        <% card.with_description do %>
+          Super cool stuff!
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="blueSectionWrapper">
+    <div class="competitionSection md-col-6">
+      <div class="competitionSection__contentBlock  col-sm-12 col-xs-12 col-lg-6">
+        <h1 class="competitionSection__contentBlock__title">
+          Make our data your own
+        </h1>
+        <span class="competitionSection__contentBlock__description">
+          With <strong>Custom Branding</strong>, you can add your logo and contact information
+          to the top of your PRO Reports. Easily share them with your network to bolster your
+          reputation and increase brand visibility.
+        </span>
+        <a href="/pricing" class="btn btn-primary btn-block">View Sample Report</a>
+      </div>
+      <div class="competitionSection__imageBlock col-sm-12 col-xs-12 col-lg-6">
+        <%= image_tag "custom_branding/customSampleReport", class: "competitionSection__imageBlock__image" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="whiteSectionWrapper">
+    <div class="carouselSection _container">
+      <div class="carouselSection__staticBlock">
+        <h1 class="carouselSection__staticBlock__title">What our customers are saying</h1>
+        <%= image_tag "leadgen/carousel.svg", class: "carouselSection__staticBlock__image" %>
+      </div>
+      <div id="carouselExampleIndicators" class="carousel slide carouselSection__carouselBlock" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item carouselSection__carouselBlock__carouselItem">
+            <h1 class="carouselSection__carouselBlock__carouselItem__text">“The quality, depth, and breadth of
+              information Rentometer gives you when researching cost comparables is far superior to all other rental
+              listing sites.” </h1>
+            <span class="carouselSection__carouselBlock__carouselItem__description">Investopedia, Best Rental Listing
+              Sites</span>
+          </div>
+          <div class="item active carouselSection__carouselBlock__carouselItem">
+            <h1 class="carouselSection__carouselBlock__carouselItem__text">"I have found Rentometer to be a very
+              valuable tool when assessing market rent. The reports produced by simply entering an address, number of
+              bedrooms and type of property results in a very user-friendly comparative market analysis presentation
+              that makes conversations with owners about their rental property values much easier." </h1>
+            <span class="carouselSection__carouselBlock__carouselItem__description">Alex C., Broker / CPM</span>
+          </div>
+          <div class="item carouselSection__carouselBlock__carouselItem">
+            <h1 class="carouselSection__carouselBlock__carouselItem__text">“[Rentometer] helps me keep things fair and
+              reasonable with my rental that is over 3000 miles from where I live! I had a good landlord back when I
+              was renting and I try to be one too. You help me do that!" </h1>
+            <span class="carouselSection__carouselBlock__carouselItem__description">Laura H., Landlord</span>
+          </div>
+        </div>
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <div class="greySectionWrapper">
+    <div class="optionsSection _container" id="scrollDiv">
+      <h1 class="optionsSection__title">
+        Why Choose Custom Branding
+      </h1>
+      <div class="optionsSection__options">
+        <div class="col-md-4 col-sm-12 optionsSection__options__option">
+          <%= image_tag "custom_branding/customStep1", class: "optionsSection__options__option__stepImage__first" %>
+          <h4 class="optionsSection__options__option__title">
+            Step 1
+          </h4>
+          <span class="optionsSection__options__option__description">
+            Add your logo and contact information to our database
+          </span>
+        </div>
+        <div class="col-md-4 col-sm-12 optionsSection__options__option">
+          <%= image_tag "custom_branding/customStep2", class: "optionsSection__options__option__stepImage__second" %>
+          <h4 class="optionsSection__options__option__title">
+            Step 2
+          </h4>
+          <span class="optionsSection__options__option__description">
+            Select your branding in the Report Branding dropdown 
+            when running a PRO Report
+          </span>
+        </div>
+        <div class="col-md-4 col-sm-12 optionsSection__options__option">
+          <%= image_tag "custom_branding/customStep3", class: "optionsSection__options__option__stepImage__third" %>
+          <h4 class="optionsSection__options__option__title">
+            Step 3
+          </h4>
+          <span class="optionsSection__options__option__description">
+            Share your custom branded report with your network
+          </span>
+        </div>
+      </div>
+      <%= link_to "Get Started Now", "/pricing", class: "optionsSection__button" %>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,28 @@
+<div class="whiteSectionWrapper">
+  <div class="section">
+    <div class="hero">
+      <% if @image_side == "left_side" %>
+        <div class="image">
+          <%= image %>
+        </div>
+      <% end %>
+      <div class="content">
+        <h3 class="sub-title">
+          <%= subtitle %>
+        </h3>
+        <h1 class="title">
+          <%= title %>
+        </h1>
+        <span class="description">
+          <%= description %>
+        </span>
+        <%= button %>
+      </div>
+      <% if @image_side == "right_side" %>
+        <div class="image">
+          <%= image %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

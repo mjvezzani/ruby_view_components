@@ -1,0 +1,19 @@
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.icon-card {
+  margin: .5em;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+} 
+
+.blurb p {
+  color: black;
+  font-size: 1rem;
+}
