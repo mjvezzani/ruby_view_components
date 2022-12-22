@@ -3,4 +3,6 @@ class TestingController < ApplicationController
     @image = "customStep2"
     @blurb = "Southpaw is brutal"
   end
+
+  def testimonials; end
 end

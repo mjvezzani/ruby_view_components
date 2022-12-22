@@ -1,0 +1,57 @@
+.video_testimonials {
+  padding: 4em;
+
+  .heading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .window {
+    border: 3px solid #ddd;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    padding: 4em;
+    margin-top: 3em;
+
+    .customers {
+      width: 30%;
+      overflow-y: auto;
+      max-height: 30em;
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .active {
+        box-shadow: 0px 0px 15px #bbb;
+      } 
+
+      .customer-card {
+        margin: .5em;
+        padding: 1.5em;
+
+        .customer-name {
+          font-family: Helvetica, sans-serif;
+        }
+
+        .customer-role {
+          font-family: Helvetica, sans-serif;
+          font-style: italic;
+          font-size: .9em;
+        }
+      }
+    }
+    .gutter {
+      width: 10%;
+    }
+    .video {
+      width: 60%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
