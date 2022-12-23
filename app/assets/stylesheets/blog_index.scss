@@ -1,0 +1,38 @@
+.blog-article-preview-card {
+  max-width: 300px;
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2em;
+  font-family: Helvetica, sans-serif;
+  padding: 1.3em;
+
+  .image {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .category-and-date {
+    margin-top: 1.3em;
+
+    .category {
+    }
+
+    .publish-date {
+    }
+  }
+
+  .title {
+    margin-top: .8em;
+
+    h2 {
+    }
+  }
+
+  .blurb {
+    margin-top: .8em;
+  }
+}

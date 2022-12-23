@@ -23,6 +23,10 @@
         list-style-type: none;
         margin: 0;
         padding: 0;
+
+        li {
+          cursor: pointer;
+        }
       }
 
       .active {
@@ -47,11 +51,17 @@
     .gutter {
       width: 10%;
     }
-    .video {
-      width: 60%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .videos {
+      .video-active {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .video-inactive {
+        display: none;
+      }
     }
   }
 }

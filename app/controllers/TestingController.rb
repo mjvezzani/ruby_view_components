@@ -5,4 +5,6 @@ class TestingController < ApplicationController
   end
 
   def testimonials; end
+
+  def blog; end
 end

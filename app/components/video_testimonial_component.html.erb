@@ -1,7 +1,25 @@
 <script>
   function addActiveClass(element) {
-    document.getElementsByClassName("customer-card active")[0].classList.remove("active");
-    element.classList.add("active");
+    let customerCards = document.getElementsByClassName("customer-card");
+    let customerVideos = document.getElementsByClassName("video");
+    let selectedIndex = null;
+
+    for (let i=0; i < customerCards.length; i++) {
+      if (element.innerText == customerCards[i].innerText) {
+        selectedIndex = i;
+      }
+    }
+
+    for (let i = 0; i < customerCards.length; i++) {
+      if (customerCards[i].classList.contains("active")) {
+        customerCards[i].classList.remove("active");
+        element.classList.add("active");
+        customerVideos[i].classList.remove("video-active");
+        customerVideos[i].classList.add("video-inactive");
+        customerVideos[selectedIndex].classList.remove("video-inactive");
+        customerVideos[selectedIndex].classList.add("video-active");
+      }
+    }
   }
 </script>
 
@@ -25,7 +43,7 @@
         <li>
           <div class="customer-card active" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Sam Boynton
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -35,7 +53,7 @@
         <li>
           <div class="customer-card" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Michelle Hephardt
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -45,7 +63,7 @@
         <li>
           <div class="customer-card" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Geoff Mintzel
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -55,7 +73,7 @@
         <li>
           <div class="customer-card" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Georgina Leffschrader
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -65,7 +83,7 @@
         <li>
           <div class="customer-card" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Bob Rechnel
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -75,7 +93,7 @@
         <li>
           <div class="customer-card" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Jimothee Horthock
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -85,7 +103,7 @@
         <li>
           <div class="customer-card" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Habithinia Iseenben
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -95,7 +113,7 @@
         <li>
           <div class="customer-card" onclick="addActiveClass(this)">
             <div class="customer-name">
-              Michael Ketchen
+              Frederick Jon Haasebergen
             </div>
             <div class="customer-role">
               Commonwealth Collective LLC
@@ -105,8 +123,34 @@
       </ul>
     </div>
     <div class="gutter"></div>
-    <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/9rDK2rbm6DI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="videos">
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ixn0z3iGBi4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-active">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/RoFz9V_BEG4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hSk_fgAAjjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/U2IEwUFCKzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9bQzbduuGlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LWMED_3Nvig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LCAMvnCx2X8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/kfxm1I7L07I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="video video-inactive">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/b_gJVJvOA3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </section>

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get '/testing', to: 'testing#index'
   get '/testimonials', to: 'testing#testimonials'
+  get '/blog' => 'testing#blog'
 end
