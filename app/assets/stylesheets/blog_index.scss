@@ -1,3 +1,9 @@
+.blog-article-shelf {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .blog-article-preview-card {
   max-width: 300px;
   background-color: red;
